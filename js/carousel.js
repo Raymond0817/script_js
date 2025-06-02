@@ -23,7 +23,7 @@ constructor(imagem, texto, link){
                 Carousel._sequence = 0;
                 Carousel._size = arr.length;
                 Carousel.Next(); //start
-                Carousel._interval = setInterval(function(){ Carousel.Next(); },5000);
+                Carousel._interval = setInterval(function(){ Carousel.Next(); },2000);
             }
             
         } else {
@@ -32,7 +32,13 @@ constructor(imagem, texto, link){
     }
 
     static Next(){
-        document.getElementById("carousel-title").innerHTML = carouselArr[2].texto
-        document.getElementById("image").src = carouselArr[2].imagem
+        const item = Carousel._sequence;
+        document.getElementById("carousel-title").innerHTML = carouselArr[item].texto;
+        document.getElementById("carousel").innerHTML = `<img src="${carouselArr[item].imagem}">`
+        Carousel._sequence++
+
+    if (Carousel._sequence == Carousel._size){
+        Carousel._sequence = 0;
+    }
     }
 };
