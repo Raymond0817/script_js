@@ -33,8 +33,8 @@ constructor(imagem, texto, link){
 
     static Next(){
         const item = Carousel._sequence;
-        document.getElementById("carousel-title").innerHTML = carouselArr[item].texto;
-        document.getElementById("carousel").innerHTML = `<img src="${carouselArr[item].imagem}">`
+        document.getElementById("carousel-title").innerHTML =`<a href="${carouselArr[item].link}">${ carouselArr[item].texto}</a>`
+        document.getElementById("carousel").innerHTML = `<img src="${carouselArr[item].imagem}" style="height: 100%; display: block; margin:auto;">`
         Carousel._sequence++
 
     if (Carousel._sequence == Carousel._size){
@@ -42,3 +42,15 @@ constructor(imagem, texto, link){
     }
     }
 };
+class carro{
+    constructor(modelo, preço, imagem){
+        this.modelo = modelo;
+        this.preco = preco;
+        this. imagem = imagem;
+    }
+}
+
+
+  
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:5500/contato.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford</title>    
+    <link href="./Ford_files/reset.css" rel="stylesheet">
+    <link href="./Ford_files/style.css" rel="stylesheet">
+    <link href="./Ford_files/form.css" rel="stylesheet">
+    <script src="./Ford_files/form.js.download"></script>
+</head>
+<body>
+    <header>       
+        <div>
+            <img src="./Ford_files/logo-ford-256.png" width="150" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1:5500/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/lancamento.html">Lançamento</a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5500/contato.html">Contato</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="forms">
+            <div>
+                <img src="./Ford_files/xls 2.2 diesel.jpg">
+            </div>
+            <div>
+                <h2 class="titulo">Sobre Você</h2>
+            <form onsubmit="Post(this);">
+                <input type="text" name="nome" placeholder="NOME*" class="fordform" required="">
+                <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required="">
+                <input type="text" name="cpf" placeholder="CPF*" class="fordform" required="">
+                <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required="">
+                <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required="">
+                <select name="contato" class="fordform" required="">
+                    <option selected="">COMO DESEJA SER CONTATADO</option>
+                    <option>TELEFONE</option>
+                    <option>E-MAIL</option>
+                </select>
+            <button type="submit">Enviar</button>
+            </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav id="social">
+            <ul>
+                <li><span class="redesociais">Redes Sociais</span></li>
+                <li><a href="http://127.0.0.1:5500/contato.html#" title="Facebook"><img src="./Ford_files/facebook-50.png"></a></li>
+                <li><a href="http://127.0.0.1:5500/contato.html#" title="YouTube"><img src="./Ford_files/youtube-squared-50.png"></a></li>
+                <li><a href="http://127.0.0.1:5500/contato.html#" title="Instagram"><img src="./Ford_files/instagram-logo-50.png"></a></li>
+            </ul>
+        </nav>
+        <div>
+           <img src="./Ford_files/ford-96.png" width="70">
+        </div>
+    </footer>    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
